@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin: 1rem auto 1.2rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="ping-logo" class="logo" />
+      <h3 class="title">We are launching <strong>soon!</strong></h3>
+      <h5 class="notification">Subscribe and get notified</h5>
+      <form action="/" id="subscribe-form">
+        <div class="form-flex">
+          <div class="input">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email address..."
+            /><br />
+          </div>
+          <div class="btn">
+            <button type="button" id="subscribe-btn">Notify Me</button>
+          </div>
+        </div>
+        <span class="error-msg">Please provide a valid email addres</span>
+      </form>
+    </header>
+    <main>
+      <div class="image-container">
+        <img
+          src="./images/illustration-dashboard.png"
+          alt="dashboard-illustration-image"
+        />
+      </div>
+    </main>
+    <footer>
+      <ul class="social-icons">
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+      </ul><br>
+      <span class="copyright"> &copy; Copyright Ping. All rights reserved.</span>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Naglaa Raslan</a>.
+      </p>
+    </footer>
+    <!--   We are launching soon!
+
+  Subscribe and get notified
+
+  Notify Me
+
+  &copy; Copyright Ping. All rights reserved. -->
+  </body>
+</html>
