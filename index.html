@@ -35,35 +35,45 @@
     </style>
   </head>
   <body>
-    <header>
-      <img src="./images/logo.svg" alt="ping-logo" class="logo" />
-      <h3 class="title">We are launching <strong>soon!</strong></h3>
-      <h5 class="notification">Subscribe and get notified</h5>
-      <form action="/" id="subscribe-form">
-        <div class="form-flex">
+   <header>
+    <img src="./images/logo.svg" alt="ping-logo" class="logo" />
+    <h3 class="title">We are launching <strong>soon!</strong></h3>
+    <h5 class="notification">Subscribe and get notified</h5>
+    <form action="/" id="subscribe-form">
+      <div class="form-grid">
+        <div class="cell cell1">
           <div class="input">
             <input
               type="email"
               name="email"
               id="email"
+              class="normal-style"
               placeholder="Your email address..."
-            /><br />
+            />
           </div>
+        </div>
+        <div class="cell cell2">
           <div class="btn">
             <button type="button" id="subscribe-btn">Notify Me</button>
           </div>
         </div>
-        <span class="error-msg">Please provide a valid email addres</span>
-      </form>
-    </header>
-    <main>
-      <div class="image-container">
-        <img
-          src="./images/illustration-dashboard.png"
-          alt="dashboard-illustration-image"
-        />
+        <div class="cell cell3">
+          <div class="error-messages">
+            <span class="empty-error-msg">"Whoops! It looks like you forgot to add your email"</span>
+            <span class="format-error-msg">"Please provide a valid email addres"</span>
+           </div>
+        </div>
       </div>
-    </main>
+    </form>
+   </header>
+   <main>
+    <div class="image-container">
+      <img
+        src="./images/illustration-dashboard.png"
+        alt="dashboard-illustration-image"
+      />
+    </div>
+  </main>
     <footer>
       <ul class="social-icons">
         <li><i class="fa-brands fa-facebook-f"></i></li>
@@ -78,12 +88,5 @@
         >. Coded by <a href="#">Naglaa Raslan</a>.
       </p>
     </footer>
-    <!--   We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved. -->
   </body>
 </html>
