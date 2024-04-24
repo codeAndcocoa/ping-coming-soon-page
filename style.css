@@ -27,21 +27,25 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
+
 header,
 main,
 footer {
   flex: 1;
 }
+
 /*** Header */
+
 header {
   width: 100%;
   margin: 0;
   text-align: center;
 }
+
 header img {
-  width: 80px;
+  width: 70px;
   max-width: 100%;
-  margin:1.2rem auto;
+  margin: 1.2rem auto;
 }
 
 header .title {
@@ -49,6 +53,7 @@ header .title {
   color: var(--neutral1);
   font-weight: 300;
 }
+
 header .title strong {
   color: var(--neutral2);
 }
@@ -58,34 +63,40 @@ header .notification {
   font-size: 1.2rem;
   margin: 1rem auto;
 }
-/*** Subscription form  */
-#subscribe-form {
-  position: relative;
-}
-.form-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40rem;
+
+/*** Subscription section  */
+.form-grid{
+  width: 50rem;
   max-width: 100%;
-  margin: 1.3rem auto;
-  padding: 1rem;
-  gap: 1rem;
+  margin: 1.2rem auto;
+  padding:  1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.form-flex .input {
-  flex: 2;
+.cell {
+  padding: .4rem 1rem;
 }
-.form-flex .btn {
-  flex: 1;
+.cell1{
+  grid-column: 1 / 3;
 }
+.cell3{
+  grid-row: 2 / 3;
+  grid-column: 1 / span 3;
+  display: none;
+
+}
+
+
 #email,
 #subscribe-btn {
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 25px;
 }
-#email {
+
+.normal-style {
   border: 1.1px solid var(--primary1);
   outline: none;
 }
@@ -93,6 +104,7 @@ header .notification {
   color: var(--primary1);
   font-size: 1rem;
 }
+
 #subscribe-btn {
   border: none;
   outline: none;
@@ -102,20 +114,24 @@ header .notification {
   box-shadow: 0px 7px 8px hsl(223, 87%, 63%, 0.5);
   cursor: pointer;
 }
-#subscribe-btn:hover{
-  background-color: hsl(223, 87%, 63% , 0.7);
+#subscribe-btn:hover {
+  background-color: hsl(223, 87%, 63%, 0.7);
 }
-#subscribe-form .error-msg {
-  position: absolute;
+
+.error-messages {
+  text-align: left;
   color: var(--secondary2);
-  font-size: 0.78rem;
-  left: 30%;
-  top: 90%;
-  display: none;
+  font-size: 1rem;
 }
+
+.empty-error-msg,
+.format-error-msg {
+ display: none;
+}
+
 /*** Main illustration */
 .image-container {
-  width: 45rem;
+  width: 53rem;
   max-width: 100%;
   margin: 1rem auto;
 }
@@ -151,9 +167,7 @@ footer .copyright {
   font-size: .8rem;
 
 }
-.black::placeholder{
-  color:#000;
-}
+
 /***Media Queries  */
 @media screen and (max-width: 600px) {
   header .title {
@@ -162,31 +176,38 @@ footer .copyright {
   header .notification{
     font-size: 1rem;
   }
-  #subscribe-form .error-msg {
-    left: 10%;
-    transform: translateX(-20%);
-    top: 45%;
-  }
   .image-container {
     width: 80%;
   }
 }
-
 @media screen and (max-width: 768px) {
-  .form-flex {
-    flex-direction: column;
-    gap: 3rem;
+  .form-grid{
+    grid-template-columns: 1fr;
   }
-  .form-flex .btn,
-  .form-flex .input {
-    width: 100%;
+  .cell1 , .cell3{
+    grid-area: auto;
+  }
+  .cell1{
+    order: 0;
+  }
+  .cell3{
+    order: 1;
+  }
+  .cell2{
+    order: 2;
   }
   #subscribe-form .error-msg {
     font-size: 0.89rem;
-    left: 36%;
-    top: 45%;
   }
   .social-icons li {
     font-size: .77rem;
   }
+  .image-container{
+    max-width: 70%;
+    text-align: center;
+  }
+  .error-messages {
+    text-align: center
+  }
+
 }
